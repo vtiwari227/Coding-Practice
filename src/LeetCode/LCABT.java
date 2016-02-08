@@ -5,7 +5,10 @@ import java.util.Map;
 import java.util.Set;
 import java.util.Stack;
 import LeetCode.TreeNode;
-/*class TreeNode {
+
+
+public class LCABT {
+	class TreeNode {
 	int val;
 	TreeNode left;
 	TreeNode right;
@@ -13,9 +16,7 @@ import LeetCode.TreeNode;
 		this.val = data;
 		left = right =null;
 	}
-}*/
-
-public class LCABT {
+	}
 	public TreeNode LCA(TreeNode root, TreeNode p , TreeNode q) {
 	Map<TreeNode, TreeNode> parent = new HashMap<>();
 	Stack<TreeNode> stack = new	Stack();
