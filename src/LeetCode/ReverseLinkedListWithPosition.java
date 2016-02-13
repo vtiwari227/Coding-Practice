@@ -1,5 +1,6 @@
 package LeetCode;
-
+//The logic is you come till the point where the windows starts and then you keep shuffling elements at odd
+// 
 public class ReverseLinkedListWithPosition {
 	public ListNode reverseBetween(ListNode head, int m, int n) {
 	    if(head == null) return null;

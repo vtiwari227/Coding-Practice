@@ -14,17 +14,23 @@ class TreeNode {
 	}
 }
 public int kthSmallest(TreeNode root, int k) {
-    Stack<TreeNode> stack = new Stack<TreeNode>();
-    ArrayList<Integer> result = new ArrayList<Integer>();
-     stack.push(root);
-     while(!(stack.isEmpty())){
-    	  TreeNode node = stack.pop();
-    	  if(node.left != null){
-    		  stack.push(node.left);
-    		  
-    	  }
-    	  
-     }
-	return k;
-}
+	Stack<TreeNode> stack = new Stack<TreeNode>();
+	 
+    TreeNode p = root;
+    int result = 0;
+ 
+    while(!stack.isEmpty() || p!=null){
+        if(p!=null){
+            stack.push(p);
+            p = p.left;
+        }else{
+            TreeNode t = stack.pop();
+            k--;
+            if(k==0)
+                result = t.val;
+            p = t.right;
+        }
+    }
+ 
+    return result;
 }

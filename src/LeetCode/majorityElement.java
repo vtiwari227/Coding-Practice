@@ -1,7 +1,10 @@
 package LeetCode;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class majorityElement {
 	   public int findmajorityElement(int[] num) {
@@ -52,7 +55,11 @@ for(int i: nums){
 }
 
 List<Integer> result = new ArrayList<Integer>();
-
-
+for(Map.Entry<Integer, Integer> entry : map.entrySet()){
+	if(entry.getValue() > nums.length/3){
+		result.add(entry.getKey());
+	}
+}
+ return result;
 }
 }

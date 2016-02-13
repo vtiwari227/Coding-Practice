@@ -7,5 +7,5 @@ public class Numberof1Bits {
 		 if((number&(1<<i)) == 1) counter++;
 	 }
 	 return counter;
- }
+ }	
 }

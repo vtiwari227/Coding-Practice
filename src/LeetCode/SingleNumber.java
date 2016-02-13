@@ -12,7 +12,7 @@ public int singleNumberusingBit(int[] array){
     }
     return tempNumber;
 }
-public int singleNumber(int[] array){
+public boolean singleNumber(int[] array){
 	HashSet<Integer> objSet = new HashSet<Integer>();
 	for(int num: array) {
 		if(objSet.contains(num)){

@@ -1,9 +1,14 @@
 package LeetCode;
-
+// To solve this problem you have to consider the follwing cases 
+// It can null or empty string 
+// It can contain white spaces 
+// Check for +/- sign
+// Calculate real values
+// handle min and max
 public class atoi {
 	public static int myAtoi(String str) {
 	    if (str == null || str.length() == 0)
-	        return 0;//
+	        return 0;
 	    str = str.trim();
 	    char firstChar = str.charAt(0);
 	    int sign = 1, start = 0, len = str.length();
