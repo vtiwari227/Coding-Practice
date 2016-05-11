@@ -1,0 +1,80 @@
+//Defining suits for given deck of cards
+public enum suits {
+	club(0), Daimond(1), Heart(2),Spade(3);
+	private int value;
+	private suits(int v){
+	value = v;
+	}
+	public int getValue() { return value;}
+	public static Suit getSuitFromValue(int value){  }
+}
+
+public class Deck <T extends Card> {
+private ArrayList<T> cards; // all cards ,dealt or not 
+private int dealtIndex =0; // marks first undealt cards
+
+public void setDeckofCards(ArrayList<T> deckofCards) {....}
+public void shuffle() {...}
+publiic int remainingCards() {
+return cards.size()- dealtIndex;
+}
+public T[] dealHand(int number){...} // Set of cards you get through deal
+public T deadCard() {....}  //The card through which you get deal
+
+}
+public abstract class Card {
+private boolean available = true;
+//Protected define instance field available to that class and the child classes
+protected int faceValue;
+protected Suits suit;
+// You can define constructor for abstract  class and that will be property of all the extending classes.
+
+public Card(int c, Suit s){
+	faceValue = c;
+	suit = s;
+	}
+public Suit suit(){ return suit;}
+public abstract intValue(); // Since it's implementation can differ based on each child card class
+public boolean isAvailable(return available);
+public void markUnavailable(available = false;);
+public void markAvailable(available = true;)
+}
+
+public class Hand<T extends Card> {
+protectd Arraylist<T> cards = new ArrayList<T>();
+public int score() {
+for(T card :cards}{
+ int score = 0;
+ for(T card : cards) {
+  score+= card.value();
+ }
+return score;
+}
+public void addCard(T card){
+ cards.add(card); 
+
+}
+// Based on the rules of the game each game have different hand rule.
+public class  BlackJack extends  Hand<BlackJack> {
+	public int score() {
+	ArrayList<Integer> scores =  possiblescores();
+	int maxUnder  =Integer.MIN_VALUE;
+	int minOver = Integer.MAX_VALUE;
+	for(int score : scores){
+	 if(score > 21 && score < minOver) {
+	 minscore = score;
+	 }
+	 else if(score)
+	}
+	
+	}
+
+}
+}
+
+
+
+
+
+
+

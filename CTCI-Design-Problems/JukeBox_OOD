@@ -1,0 +1,56 @@
+// Person can enter coin and select the vido
+// Person can create /add music to it's playlist
+
+// JukeBox : Core functionality is to play song when user enter a coin from the pre-defined list
+
+Define core Object:
+JukeBox
+User
+Display
+PlayList
+Songs
+ 
+
+//PlayList- CD Select, Song Select, Queue up the Songs,
+//User  -Adding User ,deleting User and adding credit history
+public class JukeBox {
+User user;
+private CDPlayer cdPlayer;
+private User user;
+Set<CD> cdCollection;
+private SongSelector ts;
+
+public JukeBox (CDPlayer cdPlayer , User user, Set<CD> cdCollection, SongSelector ts) {
+}
+
+public Song getCurrentSong() (return ts.getCurrentSong();)
+public void setUser(User u){ this.user = u;}
+}
+public class CDPlayer {
+private PlayList p;
+private CD c;
+/*Constructor*/
+public CDPlayer (CD c, Playlist p) { }
+public CDPlayer(CD c) { }
+public CDPlayer(Playlist p) {this.p = p;  }
+
+/* Play song  */
+public void PlaySong(Song s) {  }
+
+public PlayList getPlaylist(return p;)
+public void setPlaylist(Playlist p) { this.p = p;}
+public CD getCD() { return c;}
+public void SetCD( CD c) { this.c = c;}
+}
+public class PlayList {
+private  Song song;
+private Queue<Song> queue;
+public PlayList(Song song, Queue<Song> queue) {
+}
+
+public Song getNextToPlay() {
+return queue.peek();
+}
+public void queueUP
+
+}

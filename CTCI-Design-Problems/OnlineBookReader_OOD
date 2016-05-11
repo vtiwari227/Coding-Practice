@@ -1,0 +1,51 @@
+// A user can read a book
+// A user can create a collection of it's book
+// Search through database of books
+// Read a book
+// User membership creation and extention
+
+
+//Composition Framework
+
+//User(User Manager) , Books(library) , Display(Class)
+//Action : User can read , close ,Dispaly will show the catalog 
+
+public class OnlineReaderSystem {
+private Library library;
+private UserManager userManager
+private Display display;
+private Book activeBook
+private User activeUser;
+
+public OnlineReaderSystem() {
+userManager = new UserManager();
+library  = new Library();
+display  = new Display();
+}
+
+public Library getLibrary() { return library};
+public UserManger getUserManager() { return userManager};
+public Display getDisplay() }{ return display ;}
+public Book getActiveBook(Book book){ return activeBook;}
+public void setActiveBook (Book book){
+activeBook  =book;
+display.displayUser(user);
+}
+public User getActiveUser(){ }
+public void setActiveUser(User user){ }
+}
+
+public class Library {
+private HashMap<Integer,Books> books;
+public Book addBook(int id ,String details ) {
+if(books.containsKey((id)){
+return null;}
+Book book = new Book (id,details);
+books.put(id,book);
+return book;
+}
+}
+
+
+//Refer CTCI for further implemenation ,This problem is a simple implementation of composition design pattern
+

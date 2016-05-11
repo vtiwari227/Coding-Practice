@@ -1,0 +1,86 @@
+// Parking Lot 
+Requirment for Parking Lot (Start with use cases)
+1. It will have facililty to park
+2. Type of Viechles
+3. Will it support money for parking
+4. Unparking
+
+// ParkingSpot , Viechles  -Object
+//Park Unpark   -Action they can perform
+
+// Now with OOD ,I can easily see a overlap of behaviour between viechle and type of viechles
+----------It's a mapping between viechle (which is abstract class and have child classes of n number of types) with Parking Spot which is itself a class with 
+certain set of properties such aas Level ,Spots,CanFitViechle, getSpotsNumber..All parking Slot will come and are part of a level , if it's a part of multi level
+and come under Level class ,Which internally comes under ParkingSpots class. 
+
+//////A User billing activity can further be introduced to handle billing which will come as argument to method 
+public boolean  parkVehicle(Vehicle vehicle){....}
+
+
+public enum VehicleSize  {motorCycle, Large ,Compact}
+public abstract class viechle {
+protected ArrayList<ParkingSpot> ParkingSpots = new ArrayList<ParkingSpot>();
+protected String licensePlate;
+protected int spotsNeeded;
+protected ViechleSize size;
+
+public int getSpotsNeeded() { return sportsNeeded;}
+public VehicleSize getSize(){return size;}
+public void parkInSpot(ParkingSpot S) {  parkingSpots.add(s);} // Park viechle in the spots
+public void clearSpots() {}
+public abstract boolean canFitInSpot(ParkingSpot spot); // Check if spot is big enough to park
+}
+public class Bus extends Viechle {
+public Bus() {
+sportsNeeded =5;
+size = VehicleSize.large;
+}
+public boolean canFitInSpot(Parking Spot) {  }
+}
+public class MotorCycle extends Viechle {
+public MotorCycle {
+size = VehicleSize.MotorCycle;
+sportsNeeded =1;
+
+}
+public boolean canFitInSpot(ParkingSpot s){}
+}
+
+public Class ParkingLot {
+private Levels[] level;
+private fina int nums_levels = 5;
+public ParkingLot() {   }
+//Park the viechle in a spot ,Return false if failed
+public boolean parkViechle(Viechle vehicle)
+
+
+}
+
+public class Level {
+private int floor;
+private ParkingSpot[] spots;
+private int availableSpots =0;
+
+public Level() {
+}
+
+public int availableSpots() { return availableSpots;}
+public boolean parkVehicle(Vehicle vehicle){   }
+
+private boolean parkSStartingAtSpot(int num , Vehicle v) {   }
+
+public void spotsFred() {availableSpots++;}
+
+}
+
+public class ParkingSpot {
+private Vehicle vehicle;
+private VehicleSize spotSize;
+.
+.
+
+public boolean isAvailable() {}
+public boolan canFitVehicle(Vehicle vehicle) {...}
+public boolan park(Viechle v){...}
+public void removeViechle(){   }
+}

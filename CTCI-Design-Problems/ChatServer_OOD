@@ -1,0 +1,42 @@
+//Chat Server
+// Define the use cases 
+// can send messages to another user
+// Add /delete a friend
+// Create group
+//online or offline
+//friend request accept/ reject
+
+
+Core objects : User , Message 
+Action : Add User, delete User ,Status Message , Friend List , Message type of meesage , 
+
+(Database to store user details and chat archive , SQL DB is good , if you need scale go for big Table)
+for Communication between client and Server we can use xml, it's not the best compressed format but parsing is easy
+Server will contain a set of machines and we should avoid single point of failure by replicating data across machine , or we can have load balancer
+
+//UserManager centeral to core user actions
+public Class UserManager {
+private static UserManager instance;
+//maps from a user id to user
+private HashMap<Integer,User> usersByID;
+
+//maps from an account name to a user
+private HashMap<String,User> usersByAccountName; 
+
+//maps from the user id to an online user
+private HashMap<Integer,User> onlineUsers;
+
+public static UserManager getInstance() {
+if(instance ==null) instance  = new UserManager();
+return instance;
+
+}
+public void addUser (User fromUser ,String toAccountName){  }
+public void approveAddRequest(AddRequest req) {    }
+public void rejectAddRequest(AddRequest req) {....}
+public void UserSignedON(String accountName){   }
+public void UserSignedOff(String accountName) {....} 
+
+
+
+}

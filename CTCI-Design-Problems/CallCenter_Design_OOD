@@ -1,0 +1,95 @@
+//Design a call Center 
+
+Requirement:-
+1. It will accept calls  // User
+2. It will assign calls to indivdiual employees  //Employee 
+3. Escalate to other employee if issue is not resolved
+
+Core object & Functionality :
+Call 
+User
+Employee
+Call Center
+
+Data Structure & Algorithm :- 
+1. Queue or Priority Queue
+
+public class CallHandler {
+// 3 level of Employees : respondent ,mangers ,directors
+
+private final int levels = 3;
+
+private final int num_respondent  =10;
+private final int nm_managers = 4;
+private final int num_directors = 2;
+
+//Level 0 for respondents, 1 for managers ,2 for directors
+List<List<Employee>> employeeLevel;
+
+public CallHandlers () {  }
+public Employee getHandlerforCall(Call call)
+public void dispatchCall(Caller caller){
+   Call call  = new Call(Caller);
+   dispatchCall(call);
+   
+//Routes the call to available employee or saves in queue if no employee is available 
+public void dispatchCall( Call call) {
+ Employee emp = getHandlerforCall(call);
+ //Just set both sides with each other 
+ if(emp! = null){
+ emp.recieveCall(call);
+ call.setHandler(emp);
+ 
+ }
+ else {
+  Call.reply("    ");
+  callQueue.get(call.getRank.getVAlues()).add(call));
+  
+  public boolean assignCall(Employee emp){
+  }
+ 
+ }
+
+
+}
+
+}
+}
+
+public calss Call {
+private Rank rank;
+private Caller caller ;
+private Employee handler;
+public Call(caller C){
+rank = Rank.responder
+caller = c;
+}
+public void setHandler(Employee e){
+handler = e;
+}
+
+public Rank getRank() { return Rank;}
+public void setRank() { };
+public Rank incrementRank() { };
+public void disconnect()
+}
+
+abstract class Employee {
+
+private Call currentCall = null;
+protected Rank = rank;
+
+public Employee (CallHandler handler){
+
+}
+public void receiveCall(Call call){ }
+public void CallCompletd() {  }
+public void escalateAndReassign() {   }
+public boolean isFree(return currentCall = null;)
+
+}
+
+
+
+
+

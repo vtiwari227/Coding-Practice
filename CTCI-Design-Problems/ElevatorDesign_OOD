@@ -1,0 +1,8 @@
+Elevator Design System
+// It's a complex version of Call Center problem in a way that in main elevator class we will have attribute such as direction,currentFloor,currentCapacity and
+//other attributes
+
+//Then you need a Passanger class that will have atribute as Destination Floor
+//If the system have more than one elevator then there is a third Banker that will map between passenger request to Elevator avaliablity but it's not same as
+//client server that if one is free it will take it..you need to consider the current floor ,going up or current capacity
+
